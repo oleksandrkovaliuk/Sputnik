@@ -1,0 +1,547 @@
+/* First page */
+header {
+    background-image: url(../img/homepage-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.background-color {
+    opacity: 0.13;
+    background: var(--1, #01050E);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header-wrap {
+    display: flex;
+    padding-inline: 87px;
+    padding-block: 40px 0px;
+}
+
+.header-wrap .logo-block {
+    max-width: 920px;
+    margin: auto;
+    padding-top: 138px;
+    z-index: 2;
+}
+
+.logo-block .logo {
+    margin-bottom: 46px;
+}
+
+.logo-block .main-text {
+    margin-bottom: 133px;
+}
+
+.logo-block .creative-block {
+    padding: 88px;
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(3px);
+    text-align: left;
+    max-width: 418px;
+}
+
+.creative-block .creative-text {
+    color: var(--white);
+    font-family: 'GothamProMedium';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 42px;
+}
+
+.creative-block button {
+    padding: 25px 40px;
+}
+
+.header-wrap .menu-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 87px;
+}
+
+.menu-wrap .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 2;
+}
+
+/* First page end */
+
+/* Second page start */
+.section-2 {
+    background-image: url(../img/about-company-bg.png);
+    background-repeat: no-repeat;
+    padding-bottom: 87px;
+    background-size: cover;
+}
+
+.header {
+    margin-bottom: 86px;
+}
+
+.section-2 .about-company-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 75px;
+}
+
+.about-company-wrap .top-text-about {
+    max-width: 550px;
+    margin-bottom: 101px;
+}
+
+.top-text-about .main-text {
+    margin-bottom: 16px;
+}
+
+.top-text-about .discription {
+    font-family: 'GothamPro';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    color: var(--white);
+}
+
+.section-2 .about-company-blocks {
+    margin-bottom: 102px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-company-blocks .about-company-block {
+    display: flex;
+    align-items: center;
+    max-width: 472px;
+    width: 100%;
+}
+
+.about-company-block svg {
+    width: 72px;
+}
+
+.about-company-blocks .svg.plus-dottedline {
+    position: relative;
+}
+
+.about-company-block .number {
+    font-family: 'GothamProBold';
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 62px;
+    color: var(--white);
+}
+
+.about-company-block .number.first-block {
+    margin-inline: 26px 13px;
+}
+
+.about-company-block .number.second-block {
+    margin-inline: 26px 29px;
+}
+
+.about-company-block .number.forth-block {
+    margin-inline: 26px 51px;
+}
+
+.about-company-block .discription,
+.about-company-wrap .discription-bottom {
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--white);
+    max-width: 276px;
+}
+
+.about-company-block .discription.width {
+    max-width: 227px;
+}
+
+.about-company-wrap .discription-bottom {
+    max-width: 730px;
+    width: 100%;
+}
+
+.svg.plus-dottedline .dotted-line {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(0px, 71px);
+    width: unset;
+
+}
+
+/* Second page end */
+
+/* Third page start */
+.section-3 {
+    background-image: url(../img/catalog-page-bg.png);
+    background-repeat: no-repeat;
+    padding-bottom: 87px;
+    background-size: cover;
+}
+
+.catalog-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.catalog-container .catalog-wrap {
+    max-width: 920px;
+    margin: auto;
+    width: 100%;
+}
+
+.catalog-wrap .main-text {
+    margin-bottom: 76px;
+}
+
+.catalog-wrap ul {
+    max-width: 648px;
+}
+
+.catalog-wrap .catalog-list {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    padding-bottom: 51px;
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 57px;
+    cursor: pointer;
+}
+
+.catalog-list svg path {
+    fill: var(--white);
+}
+
+.catalog-wrap .catalog-list:last-child {
+    border-bottom: unset;
+    padding: unset;
+}
+
+.catalog-list .catalog-number {
+    font-family: 'GothamPro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    position: relative;
+    color: var(--gray);
+}
+
+.catalog-list .catalog-number::after {
+    content: "//";
+    position: absolute;
+    font-family: 'GothamPro';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    position: relative;
+    color: var(--gray);
+    right: -9px;
+    top: -5px;
+    margin-bottom: 5px;
+}
+
+.name-arrow {
+    display: flex;
+    align-items: center;
+    gap: 7;
+}
+
+.name-arrow .catalog-name-txt {
+    font-family: 'GothamPro';
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--white);
+}
+
+.name-arrow svg path {
+    fill: none;
+    display: none;
+}
+
+.catalog-list:hover svg path {
+    fill: var(--ligth-blue);
+}
+
+.catalog-list:hover .name-arrow .catalog-name-txt {
+    color: var(--ligth-blue);
+}
+
+.catalog-list:hover .name-arrow svg path {
+    display: block;
+    fill: none;
+}
+
+.catalog-container .shows-block-wrap {
+    padding: 0px 88px 88px;
+    background-color: var(--dark-gray);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    position: absolute;
+    right: 86px;
+    bottom: 0;
+    top: 0;
+    display: none;
+    max-width: 453px;
+}
+
+.shows-block-wrap.show {
+    display: flex;
+}
+
+.shows-block-wrap .closebtn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.shows-block-wrap ul {
+    list-style: none;
+}
+
+.shows-block-wrap .catalog-block-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 38px;
+    cursor: pointer;
+}
+
+.shows-block-wrap .catalog-block-list:last-child {
+    margin-bottom: 62px;
+}
+
+.shows-block-wrap button {
+    padding: 25px 40px;
+}
+
+.catalog-block-list .catalog-block-txt {
+    font-family: 'GothamProBold';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--white);
+}
+
+/* Third page end */
+/* Fourth page start */
+.section-4 {
+    background-color: var(--dark-gray);
+    padding-bottom: 141px;
+}
+
+.section-4 .project-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 170px;
+    padding-left: 307px;
+    align-items: center;
+}
+
+.project-container .switcher-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.switcher-wrap .switcher {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 46px;
+    background-color: var(--dark-gray);
+}
+
+.switcher .switcher-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.switcher .switcher-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 36px;
+    border: 1px solid var(--gray);
+    background-color: var(--dark-gray);
+}
+
+.switcher .switcher-slider:before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    bottom: 2px;
+    left: 10.6%;
+    right: 0px;
+    border-radius: 18px;
+    background-color: var(--ligth-blue);
+    height: 18px;
+    width: 18px;
+    transition: transform 0.3s ease-in;
+}
+
+.switcher .switcher-input:checked+.switcher-slider:before {
+    transform: translateY(-22px);
+}
+
+.project-container .project-top-text {
+    width: 100%;
+    padding-right: 87px;
+}
+
+.project-top-text .project-main-text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #4C5566;
+    align-items: flex-end;
+}
+
+.project-main-text .forward-or-backbtns {
+    display: flex;
+    gap: 40px;
+}
+
+.forward-or-backbtns .forward-or-backbtn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.forward-or-backbtn h3 {
+    font-family: 'GothamPro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--gray);
+}
+
+.project-top-text ul {
+    display: flex;
+    gap: 29px;
+    list-style: none;
+    padding-top: 8px;
+    margin-bottom: 41px
+}
+
+.project-top-text .project-type-selector {
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--ligther-gray);
+}
+
+.project-slider-container .project-slider {
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    scroll-behavior: smooth;
+    margin-bottom: 61px;
+    max-height: 475px;
+}
+
+.project-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.project-slider .slide-block {
+    display: flex;
+    gap: 24px;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.project-slider .slide-block.main {
+    max-width: 1330px
+}
+
+.slide-block img {
+    border-radius: 5px;
+}
+
+.project-slider-container .slider-nav-wrap {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 87px;
+}
+
+.slider-nav-wrap .slider-nav a {
+    text-decoration: none;
+}
+
+.slider-nav svg circle {
+    fill: var(--gray);
+}
+
+.slider-nav:hover svg circle {
+    fill: var(--ligth-blue);
+}
+
+.project-slider-container .project-slider-switch {
+    display: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-bottom: 61px;
+}
+
+.project-slider-switch .switch-slider-blocks {
+
+}
+.project-slider-switch .switch-slider-blocks img{
+    border-radius:5px;
+}
+.switch-slider-blocks .switch-slider {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.switch-slider-blocks .switch-slider-bottom-img {
+    display: flex;
+    max-height: 176px;
+    justify-content: space-between;
+}
+.switch-slider-bottom-img img{
+    max-width: 309px;
+}
+/* Fourth page end */

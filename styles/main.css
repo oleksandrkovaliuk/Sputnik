@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'GothamPro';
+    src: url(../fonts/GothamPro.woff);
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamProMedium';
+    src: url(../fonts/GothamPro-Medium.woff);
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamProBold';
+    src: url(../fonts/GothamPro-Medium.woff);
+    font-display: swap;
+    font-style: normal;
+}
+
+:root{
+    --dark-gray:#2A2B31;
+    --gray:#949FA8;
+    --ligther-gray:#EBEEF1;
+    --almost-white:#F8F9FA;
+    --white:#fff;
+    --blue:#0063B8;
+    --ligth-blue:#4BDAFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    padding:40px 87px 0px 89px;
+    align-items: center;
+}
+.logo-block .main-text , .top-text-about .main-text , .catalog-wrap .main-text , .project-main-text .main-text{
+    font-family: 'GothamProBold';
+    font-size: 69px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 79px;
+    color: var(--white);
+}
+.creative-block button , .shows-block-wrap button{
+    border-radius: 3px;
+    border: none;
+    background: var(--ligth-blue);
+    color: var(--new-5, #FFF);
+    font-family: 'GothamProBold';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
