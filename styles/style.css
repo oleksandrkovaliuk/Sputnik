@@ -418,7 +418,6 @@ header {
 .switcher .switcher-input:checked+.switcher-slider:before {
     transform: translateY(-22px);
 }
-
 .project-container .project-top-text {
     width: 100%;
     padding-right: 87px;
@@ -437,13 +436,16 @@ header {
     gap: 40px;
 }
 
-.forward-or-backbtns .forward-or-backbtn {
+.forward-or-backbtns .backbtn , .forward-or-backbtns .nextbtn {
     display: flex;
     align-items: center;
     gap: 9px;
+    background:none;
+    border:none;
+    cursor: pointer;
 }
 
-.forward-or-backbtn h3 {
+.forward-or-backbtns .backbtn h3 , .forward-or-backbtns .nextbtn h3{
     font-family: 'GothamPro';
     font-size: 14px;
     font-style: normal;
@@ -468,51 +470,52 @@ header {
     line-height: 27px;
     color: var(--ligther-gray);
 }
-
+.project-slider-container {
+    overflow: hidden;
+}
 .project-slider-container .project-slider {
-    overflow: auto;
-    scroll-snap-type: x mandatory;
     display: flex;
-    scroll-behavior: smooth;
     margin-bottom: 61px;
     max-height: 475px;
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease-in;
 }
 
 .project-slider::-webkit-scrollbar {
     display: none;
 }
 
-.project-slider .slide-block {
+.project-slider .slide-block{
     display: flex;
     gap: 24px;
-    flex: 1 0 100%;
-    scroll-snap-align: start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 24px;
 }
-
-.project-slider .slide-block.main {
-    max-width: 1330px
-}
-
 .slide-block img {
     border-radius: 5px;
+    width:100%;
+    max-width:833px;
 }
 
 .project-slider-container .slider-nav-wrap {
     list-style: none;
     display: flex;
+    width: 50%;
     justify-content: space-between;
-    padding-right: 87px;
+    margin: auto;
 }
 
 .slider-nav-wrap .slider-nav a {
     text-decoration: none;
 }
 
-.slider-nav svg circle {
+.sliderbtn1 svg circle , .sliderbtn2 svg circle  , .sliderbtn3 svg circle  ,.sliderbtn4 svg circle {
     fill: var(--gray);
 }
 
-.slider-nav:hover svg circle {
+.sliderbtn1:hover svg circle ,  .sliderbtn2:hover svg circle ,.sliderbtn3:hover svg circle ,.sliderbtn4:hover svg circle{
     fill: var(--ligth-blue);
 }
 
@@ -535,7 +538,6 @@ header {
     gap: 25px;
     margin-bottom: 20px;
 }
-
 .switch-slider-blocks .switch-slider-bottom-img {
     display: flex;
     max-height: 176px;
