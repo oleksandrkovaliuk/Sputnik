@@ -82,6 +82,7 @@ header {
     background-repeat: no-repeat;
     padding-bottom: 87px;
     background-size: cover;
+    margin-bottom: -1px;
 }
 
 .header {
@@ -355,6 +356,7 @@ header {
 .section-4 {
     background-color: var(--dark-gray);
     padding-bottom: 141px;
+    margin-bottom: -1px;
 }
 
 .section-4 .project-container {
@@ -418,6 +420,7 @@ header {
 .switcher .switcher-input:checked+.switcher-slider:before {
     transform: translateY(-22px);
 }
+
 .project-container .project-top-text {
     width: 100%;
     padding-right: 87px;
@@ -436,16 +439,18 @@ header {
     gap: 40px;
 }
 
-.forward-or-backbtns .backbtn , .forward-or-backbtns .nextbtn {
+.forward-or-backbtns .backbtn,
+.forward-or-backbtns .nextbtn {
     display: flex;
     align-items: center;
     gap: 9px;
-    background:none;
-    border:none;
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
-.forward-or-backbtns .backbtn h3 , .forward-or-backbtns .nextbtn h3{
+.forward-or-backbtns .backbtn h3,
+.forward-or-backbtns .nextbtn h3 {
     font-family: 'GothamPro';
     font-size: 14px;
     font-style: normal;
@@ -470,9 +475,11 @@ header {
     line-height: 27px;
     color: var(--ligther-gray);
 }
+
 .project-slider-container {
     overflow: hidden;
 }
+
 .project-slider-container .project-slider {
     display: flex;
     margin-bottom: 61px;
@@ -486,17 +493,18 @@ header {
     display: none;
 }
 
-.project-slider .slide-block{
+.project-slider .slide-block {
     display: flex;
     gap: 24px;
     flex-grow: 1;
     flex-shrink: 0;
     margin-right: 24px;
 }
+
 .slide-block img {
     border-radius: 5px;
-    width:100%;
-    max-width:833px;
+    width: 100%;
+    max-width: 833px;
 }
 
 .project-slider-container .slider-nav-wrap {
@@ -511,11 +519,17 @@ header {
     text-decoration: none;
 }
 
-.sliderbtn1 svg circle , .sliderbtn2 svg circle  , .sliderbtn3 svg circle  ,.sliderbtn4 svg circle {
+.sliderbtn1 svg circle,
+.sliderbtn2 svg circle,
+.sliderbtn3 svg circle,
+.sliderbtn4 svg circle {
     fill: var(--gray);
 }
 
-.sliderbtn1:hover svg circle ,  .sliderbtn2:hover svg circle ,.sliderbtn3:hover svg circle ,.sliderbtn4:hover svg circle{
+.sliderbtn1:hover svg circle,
+.sliderbtn2:hover svg circle,
+.sliderbtn3:hover svg circle,
+.sliderbtn4:hover svg circle {
     fill: var(--ligth-blue);
 }
 
@@ -527,23 +541,94 @@ header {
     margin-bottom: 61px;
 }
 
-.project-slider-switch .switch-slider-blocks {
+.project-slider-switch .switch-slider-blocks {}
 
+.project-slider-switch .switch-slider-blocks img {
+    border-radius: 5px;
 }
-.project-slider-switch .switch-slider-blocks img{
-    border-radius:5px;
-}
+
 .switch-slider-blocks .switch-slider {
     display: flex;
     gap: 25px;
     margin-bottom: 20px;
 }
+
 .switch-slider-blocks .switch-slider-bottom-img {
     display: flex;
     max-height: 176px;
     justify-content: space-between;
 }
-.switch-slider-bottom-img img{
+
+.switch-slider-bottom-img img {
     max-width: 309px;
 }
+
 /* Fourth page end */
+
+/* Fifth page start */
+.section-5 {
+    background-color: var(--dark-gray);
+    padding-bottom: 82px;
+}
+
+.section-5 .team-container {
+        max-width: 1583px;
+        margin-left: auto;
+        margin-right: 87px;
+}
+.team-container .teams-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.team-container .main-text{
+    margin-bottom:74px;
+}
+.team-container .team-block {
+    max-width: 264px;
+}
+.team-block .people-wrap {
+    position: relative;
+    margin-bottom:23px;
+}
+
+.people-wrap .background-for-people {
+    background-color: #1D1E22;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 35px;
+    z-index: 1;
+}
+
+.people-wrap img {
+    z-index: 2;
+    position: relative;
+    min-height:466px;
+}
+.people-wrap.sergii img{
+    padding-top:30px;
+}
+.team-block .text-wrap{
+    max-width:224px;
+}
+.text-wrap .people-name {
+    font-family: 'GothamProMedium';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom:10px;
+    color:var(--white);
+}
+
+.text-wrap  .people-position {
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color:var(--gray);
+}
+
+/* Fifth page end */

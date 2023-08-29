@@ -46,7 +46,7 @@ img {
     padding:40px 87px 0px 89px;
     align-items: center;
 }
-.logo-block .main-text , .top-text-about .main-text , .catalog-wrap .main-text , .project-main-text .main-text{
+.logo-block .main-text , .top-text-about .main-text , .catalog-wrap .main-text , .project-main-text .main-text , .team-container .main-text{
     font-family: 'GothamProBold';
     font-size: 69px;
     font-style: normal;
