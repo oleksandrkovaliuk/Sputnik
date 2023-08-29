@@ -43,3 +43,20 @@ const nextSlide = () => {
 
 backbtn.addEventListener('click' , backSlide);
 nextBtn.addEventListener('click' , nextSlide);
+
+
+btn1.addEventListener('click' , () => {
+    activeSlideIndex = 0 ;
+})
+btn2.addEventListener('click' , () => {
+    activeSlideIndex = 1 ;
+    setActiveSlide();
+})
+btn3.addEventListener('click' , () => {
+    activeSlideIndex = 2 ;
+    setActiveSlide();
+})
+btn4.addEventListener('click' , () => {
+    activeSlideIndex = 3 ;
+    setActiveSlide();
+})
