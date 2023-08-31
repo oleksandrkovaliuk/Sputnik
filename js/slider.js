@@ -33,10 +33,10 @@ const backSlide = () => {
 };
 
 const nextSlide = () => {
-    if(activeSlideIndex <= lengthOfSlides - 2){
-        activeSlideIndex++;
-    }else{
+    if(activeSlideIndex <= lengthOfSlides - 1){
         activeSlideIndex = 0;
+    }else{
+        activeSlideIndex++;
     }
     setActiveSlide();
 };
