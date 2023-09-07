@@ -40,6 +40,10 @@ img {
     max-width: 100%;
 }
 
+iframe {
+    width: 100%;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -62,7 +66,8 @@ img {
 
 .creative-block button,
 .shows-block-wrap button,
-form button {
+form button,
+.catalog-list-container ul button {
     border-radius: 3px;
     border: none;
     background: var(--ligth-blue);
@@ -83,6 +88,7 @@ form button {
 .section-6 .message-container {
     display: flex;
     gap: 93px;
+    justify-content: center;
 }
 
 .message-container .left-message-block {
@@ -166,7 +172,7 @@ form .input-wrap {
     background: var(--dark-gray);
     resize: none;
     min-height: 120px;
-    padding:25px;
+    padding: 25px;
 }
 
 .input-and-label .left-message-label.textarea {
@@ -186,7 +192,7 @@ form .input-wrap {
 .input-and-label .left-message-input:active+.left-message-label,
 .input-and-label .left-message-textarea:focus+.left-message-label.textarea,
 .input-and-label .left-message-textarea:active+.left-message-label.textarea,
-.input-and-label .left-message-input:not(:placeholder-shown)+.left-message-label ,
+.input-and-label .left-message-input:not(:placeholder-shown)+.left-message-label,
 .input-and-label .left-message-textarea:not(:placeholder-shown)+.left-message-label.textarea {
     display: none;
 }
@@ -287,11 +293,13 @@ form .checkbox-wrap {
 }
 
 footer .footer-text-and-links {
-    display: flex;
     padding: 37px 86px 36px 78px;
     background-color: #1F1F24;
     align-items: center;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
 }
 
 .footer-text-and-links h2 {
@@ -308,6 +316,7 @@ footer .footer-text-and-links {
     display: flex;
     align-items: center;
     gap: 49px;
+    justify-content: space-between;
 }
 
 ul .footer-nav a {
@@ -323,6 +332,21 @@ ul .footer-nav a {
 .footer-text-and-links .social-media {
     display: flex;
     gap: 21px;
+    justify-content: flex-end;
+}
+
+@media(max-width:1080px) {
+    footer .footer-text-and-links {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-text-and-links ul {
+        order: 3;
+        grid-column: span 2;
+        padding-top: 18px;
+        border-top: 1px solid #4C5566;
+        flex-wrap: wrap;
+    }
 }
 
 /* Footer end */
