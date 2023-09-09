@@ -249,11 +249,13 @@ header {
 
 .catalog-list-container .catalog-mobile-block {
   display: none;
-  margin-top:38px;
+  margin-top: 38px;
 }
-.catalog-list-container .catalog-mobile-block.show{
-  display:block;
+
+.catalog-list-container .catalog-mobile-block.show {
+  display: block;
 }
+
 .catalog-list-container ul button {
   padding: 25px 24px;
 }
@@ -507,12 +509,14 @@ header {
   color: var(--gray);
 }
 
-.project-top-text ul {
-  display: flex;
-  gap: 29px;
-  list-style: none;
+.project-top-text .project-text-nav-block {
+  overflow-x: auto;
   padding-top: 8px;
   margin-bottom: 41px;
+}
+.project-text-nav-block .project-nav-wrap{
+  display: flex;
+  gap: 29px;
 }
 
 .project-top-text .project-type-selector {
@@ -522,6 +526,7 @@ header {
   font-weight: 400;
   line-height: 27px;
   color: var(--ligther-gray);
+  text-decoration: none;
 }
 
 .slide-list {
@@ -648,6 +653,7 @@ header {
 
 .team-container .team-block {
   max-width: 264px;
+  flex-shrink: 0;
 }
 
 .team-block .people-wrap {
@@ -697,14 +703,26 @@ header {
   line-height: 27px;
   color: var(--gray);
 }
-header .mobile-menu-wrap{
-  display:none;
+
+header .mobile-menu-wrap {
+  display: none;
 }
+
 /* Fifth page end */
 @media(max-width:1280px) {
   .catalog-container .shows-block-wrap {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+@media(max-width:1150px) {
+  .project-container .switcher-wrap {
+    display: none;
+  }
+
+  .section-4 .project-container {
+    padding-left: 40px;
   }
 }
 
@@ -752,34 +770,82 @@ header .mobile-menu-wrap{
     max-width: unset;
   }
 
-  .section-4 .project-container {
-    padding-left: 40px;
-  }
-
   .project-container .project-top-text {
     padding-right: 0px;
   }
 
-  .project-container .switcher-wrap {
-    display: none;
+  .team-container .teams-wrap {
+    justify-content: space-between;
   }
 
-  .section-6 .message-container {
-    gap: 0px
-  }
-
-  .message-container .left-message-block {
+  .section-5 {
     padding-left: 40px;
   }
 
+  .section-6 .message-container {
+    flex-direction: column;
+    gap: 90px;
+  }
+
+  .message-container .left-message-block {
+    padding-inline: 40px;
+    padding-top: 80px;
+  }
+
+  .left-message-block svg {
+    display: none;
+  }
+
   .left-message-block .left-message-wrap {
-    margin-left: unset;
+    margin: auto;
+  }
+
+  .left-message-wrap .main-text {
+    text-align: center;
+  }
+
+  .right-contacts-block .contacts-wrap {
+    padding-block: 51px;
+    padding-inline: 40px
+  }
+
+  iframe {
+    height: 100vh;
+  }
+
+  .contacts-wrap .contantcs-text-blocks {
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .contantcs-text-blocks .contact-text-block {
+    margin-bottom: 35px;
+  }
+
+  .contantcs-text-blocks .contact-text-block:last-child {
+    margin-bottom: 0px;
+  }
+
+  .message-container .right-contacts-block {
+    display: flex;
+  }
+}
+
+@media(max-width:900px) {
+  .team-container .teams-wrap {
+    flex-wrap: unset;
+    overflow-x: auto;
   }
 }
 
 @media(max-width:768px) {
-  .section-2 .header ,.section-3 .header ,.section-4 .header ,.section-5 .header ,.section-6 .header{
-    display:none;
+
+  .section-2 .header,
+  .section-3 .header,
+  .section-4 .header,
+  .section-5 .header,
+  .section-6 .header {
+    display: none;
   }
 
   .logo-block .logo {
@@ -809,6 +875,7 @@ header .mobile-menu-wrap{
   .header-wrap {
     padding-top: 0;
     text-align: center;
+    padding-inline: 20px
   }
 
   .header-wrap .logo-block {
@@ -842,10 +909,60 @@ header .mobile-menu-wrap{
   }
 
   .section-2 .about-company-wrap {
-    padding-left: 40px;
+    padding-inline: 40px;
   }
 
   .section-2 .about-company-blocks {
     margin-bottom: 54px;
   }
+
+  .section-3 {
+    padding-block: 88px;
+  }
+
+  .section-4 {
+    padding-top: 97px;
+  }
+
+  .message-container .right-contacts-block {
+    display: unset;
+  }
+
+  .logo-block .main-text,
+  .top-text-about .main-text,
+  .catalog-wrap .main-text,
+  .project-main-text .main-text,
+  .team-container .main-text {
+    font-size:55px;
+  }
+  .text-wrap .people-name , .about-company-block .discription, .about-company-wrap .discription-bottom {
+    font-size:18px;
+  }
+  .text-wrap .people-position{
+    font-size:14px;
+  }
+}
+@media(max-width:610px){
+  .name-arrow .catalog-name-txt{
+    font-size:18px;
+  }
+  .logo-block .main-text,
+  .top-text-about .main-text,
+  .catalog-wrap .main-text,
+  .project-main-text .main-text,
+  .team-container .main-text  ,.left-message-wrap .main-text, .contacts-wrap .contacts-top-text{
+    font-size:35px;
+  }
+  .left-nav-mobile .nav , .left-nav-mobile .phone{
+    display:none;
+  }
+  .catalog-container .catalog-wrap{
+    margin-inline:20px;
+  }
+  .section-2 .about-company-wrap , .message-container .left-message-block , .right-contacts-block .contacts-wrap{
+    padding-inline:20px;
+    }
+      .section-5{
+        padding-left:20px;
+      }
 }
