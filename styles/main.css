@@ -89,11 +89,13 @@ form button,
     display: flex;
     gap: 93px;
     justify-content: center;
+    max-width: 1920px;
+    margin-left: auto;
+    padding-left: 94px;
 }
 
 .message-container .left-message-block {
-    padding-left: 84px;
-    padding-top: 45px;
+    flex-grow: 1;
 }
 
 .left-message-block svg {
@@ -101,8 +103,8 @@ form button,
 }
 
 .left-message-block .left-message-wrap {
-    max-width: 400px;
-    margin-left: 162px;
+    max-width: 445px;
+    margin-left: auto;
 }
 
 .left-message-wrap .main-text,
@@ -114,10 +116,6 @@ form button,
     font-weight: 700;
     line-height: 66px;
     color: var(--white);
-}
-
-.left-message-wrap form {
-    max-width: 400px;
 }
 
 form button {
@@ -243,10 +241,16 @@ form .checkbox-wrap {
 
 .message-container .right-contacts-block {
     background-color: #1F1F24;
+    flex-grow: 1;
 }
 
 .right-contacts-block .contacts-wrap {
-    padding: 193px 82px 183px 93px;
+    display: flex;
+    flex-direction: column;
+    min-height: 543px;
+    justify-content: center;
+    padding-inline: 93px 82px;
+    width: 100%;
 
 }
 

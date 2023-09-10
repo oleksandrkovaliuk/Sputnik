@@ -1,0 +1,151 @@
+
+.user-container {
+    background-image: url(../img/users-background.png);
+    height: 100%;
+    background-size: cover;
+}
+
+.user-container .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.user-container .user-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 118px;
+}
+
+.user-wrap .left-img-block {
+    position: relative;
+}
+.left-img-block .notes {
+    display: flex;
+    gap: 18px;
+    padding: 59px 65px;
+    background-color: var(--dark-gray);
+    position: absolute;
+    max-width: 414px;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    bottom: 145px;
+    left: -305px;
+}
+.notes h3 , .notes .notes-text {
+    color: var(--white);
+    font-family: 'GothamPro';
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 36px;
+}
+.notes h3{
+    font-size: 56px;
+    line-height: 56px; /* 100% */
+    }
+.user-wrap .right-discription-block {
+    max-width: 604px;
+    margin-right: 137px;
+    flex-grow: 1;
+}
+.right-discription-block .leave-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #17181C;
+    padding: 9px 13px 7px 8px;
+    border: unset;
+    margin-left: auto;
+    position: fixed;
+    top: 50px;
+    right: 145px;
+    cursor: pointer;
+}
+.leave-btn .leave{
+    font-family: 'GothamProBold';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color:var(--ligth-blue);
+
+}
+
+.right-discription-block .position-name {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 54px;
+}
+
+.position-name .wich-position {
+    font-family: 'GothamProBold';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    color: var(--white);
+}
+
+.position-name .name {
+    font-family: 'GothamProBold';
+    font-size: 69px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 79px;
+    color: var(--white);
+}
+
+.right-discription-block ul {
+    list-style: none;
+}
+
+.right-discription-block .user-skills {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 18px;
+}
+
+.right-discription-block .user-skills:last-child {
+    margin-bottom: 110px;
+}
+
+.user-skills svg {
+    flex-shrink: 0;
+}
+
+.user-skills .skills-text {
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--white);
+}
+
+.right-discription-block .back-or-next-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-or-next-user .back,
+.back-or-next-user .next {
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.back-or-next-user .back h3,
+.back-or-next-user .next h3 {
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--ligth-blue);
+}

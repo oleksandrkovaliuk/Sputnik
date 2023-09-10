@@ -142,8 +142,8 @@ header {
   width: 100%;
 }
 
-.about-company-block svg {
-  width: 72px;
+.about-company-block img {
+  min-width:34px;
 }
 
 .about-company-blocks .svg.plus-dottedline {
@@ -509,16 +509,13 @@ header {
   color: var(--gray);
 }
 
-.project-top-text .project-text-nav-block {
-  overflow-x: auto;
+.project-top-text ul {
+  display: flex;
+  gap: 29px;
+  list-style: none;
   padding-top: 8px;
   margin-bottom: 41px;
 }
-.project-text-nav-block .project-nav-wrap{
-  display: flex;
-  gap: 29px;
-}
-
 .project-top-text .project-type-selector {
   font-family: "GothamPro";
   font-size: 18px;
@@ -589,6 +586,7 @@ header {
 .sliderbtn3 svg circle,
 .sliderbtn4 svg circle {
   fill: var(--gray);
+  padding:7px;
 }
 
 .sliderbtn1:hover svg circle,
@@ -785,6 +783,7 @@ header .mobile-menu-wrap {
   .section-6 .message-container {
     flex-direction: column;
     gap: 90px;
+    padding-left: 0;
   }
 
   .message-container .left-message-block {
@@ -935,11 +934,21 @@ header .mobile-menu-wrap {
   .team-container .main-text {
     font-size:55px;
   }
-  .text-wrap .people-name , .about-company-block .discription, .about-company-wrap .discription-bottom {
+  .text-wrap .people-name , .about-company-wrap .discription-bottom {
     font-size:18px;
+  }
+  .about-company-block .discription{
+    font-size:14px;
   }
   .text-wrap .people-position{
     font-size:14px;
+  }
+  .project-top-text .project-main-text{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .project-top-text ul{
+    display:none;
   }
 }
 @media(max-width:610px){
