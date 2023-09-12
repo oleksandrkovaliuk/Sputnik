@@ -21,6 +21,14 @@
 
 .user-wrap .left-img-block {
     position: relative;
+    height:100vh;
+    max-width:684px;
+    flex-grow:1;
+    background-image:url(../img/dmintry-eblanov-full.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:#17181C;
 }
 .left-img-block .notes {
     display: flex;
@@ -114,7 +122,14 @@
     margin-bottom: 110px;
 }
 
-.user-skills svg {
+.user-skills::before {
+    content:"\2713";
+    width:20px;
+    height:20px;
+    border:1px solid var(--ligth-blue);
+    border-radius:20px;
+    color:var(--ligth-blue);
+    text-align: center;
     flex-shrink: 0;
 }
 
