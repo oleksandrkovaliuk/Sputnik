@@ -707,6 +707,12 @@ header .mobile-menu-wrap {
 }
 
 /* Fifth page end */
+@media(max-width:1600px){
+  .team-container .teams-wrap{
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+}
 @media(max-width:1280px) {
   .catalog-container .shows-block-wrap {
     opacity: 0;
