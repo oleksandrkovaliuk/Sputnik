@@ -3,7 +3,7 @@
     background-image: url(../img/users-background.png);
     height: 100%;
     background-size: cover;
-    padding-bottom:92px;
+    position:relative;
 }
 
 .user-container .header {
@@ -11,15 +11,40 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index:1090;
 }
 
 .user-container .user-wrap {
+    height: 100vh;
+    max-width: 1390px;
+    margin: auto;
+    margin-right: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'userImg userImg positionName positionName'
+        'userImg userImg userSkills userSkills'
+        'userImg userImg backOrNextBtn backOrNextBtn';
+    align-items: center;
+    column-gap: 118px;
+}
+#user-img-bg{
+    grid-area:userImg;
+    grid-column: span 3;
+}
+.position-name{
+    grid-area: positionName;
+    margin-bottom: 54px;
+}
+#user-skills{
+    grid-area: userSkills;
+}
+.back-or-next-user{
+    grid-area: backOrNextBtn;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 118px;
+    justify-content: space-between;
 }
-
 .user-wrap .left-img-block {
     position: relative;
     height:100vh;
@@ -31,7 +56,7 @@
     background-size:cover;
     background-color:#17181C;
 }
-.left-img-block .notes {
+.user-container .notes {
     display: flex;
     gap: 18px;
     padding: 59px 65px;
@@ -41,7 +66,7 @@
     box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.20);
     border-radius: 3px;
     bottom: 145px;
-    left: -305px;
+    left: 50px;
 }
 .notes h3 , .notes .notes-text {
     color: var(--white);
@@ -57,10 +82,9 @@
     }
 .user-wrap .right-discription-block {
     max-width: 604px;
-    margin-right: 137px;
-    flex-grow: 1;
+    padding-top: calc(94px + 94px);
 }
-.right-discription-block .leave-btn{
+.leave-btn{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -81,13 +105,6 @@
     line-height: normal;
     color:var(--ligth-blue);
 
-}
-
-.right-discription-block .position-name {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    margin-bottom: 54px;
 }
 
 .position-name .wich-position {
@@ -117,6 +134,7 @@
     align-items: flex-start;
     margin-bottom: 24px;
     gap: 18px;
+    order:2;
 }
 
 .right-discription-block .user-skills:last-child {
@@ -143,12 +161,6 @@
     color: var(--white);
 }
 
-.right-discription-block .back-or-next-user {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .back-or-next-user .back,
 .back-or-next-user .next {
     display: flex;
@@ -164,4 +176,18 @@
     font-weight: 400;
     line-height: 27px;
     color: var(--ligth-blue);
+}
+
+.section-6 , footer{
+    display:none;
+
+}
+@media(max-width:1280px){
+    .user-container .user-wrap {
+        grid-template-areas:
+        'userImg positionName'
+        'userSkills userSkills'
+        'backOrNextBtn backOrNextBtn';
+        grid-gap:18px;
+    }
 }

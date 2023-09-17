@@ -642,7 +642,6 @@ header {
 
 .team-container .teams-wrap {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .team-container .main-text {
