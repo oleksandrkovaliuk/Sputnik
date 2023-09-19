@@ -351,6 +351,54 @@ ul .footer-nav a {
         border-top: 1px solid #4C5566;
         flex-wrap: wrap;
     }
+    .section-6 .message-container {
+        flex-direction: column;
+        gap: 90px;
+        padding-left: 0;
+      }
+    
+      .message-container .left-message-block {
+        padding-inline: 40px;
+        padding-top: 80px;
+      }
+    
+      .left-message-block svg {
+        display: none;
+      }
+    
+      .left-message-block .left-message-wrap {
+        margin: auto;
+      }
+    
+      .left-message-wrap .main-text {
+        text-align: center;
+      }
+    
+      .right-contacts-block .contacts-wrap {
+        padding-block: 51px;
+        padding-inline: 40px
+      }
+    
+      iframe {
+        height: 100vh;
+      }
+    
+      .contacts-wrap .contantcs-text-blocks {
+        align-items: unset;
+        flex-direction: column;
+      }
+    
+      .contantcs-text-blocks .contact-text-block {
+        margin-bottom: 35px;
+      }
+    
+      .contantcs-text-blocks .contact-text-block:last-child {
+        margin-bottom: 0px;
+      }
+    
+      .message-container .right-contacts-block {
+        display: flex;
+      }
 }
 @media(max-width:600px){
     footer .footer-text-and-links{

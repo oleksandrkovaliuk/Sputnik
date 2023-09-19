@@ -1,9 +1,8 @@
-
 .user-container {
     background-image: url(../img/users-background.png);
     height: 100%;
     background-size: cover;
-    position:relative;
+    position: relative;
 }
 
 .user-container .header {
@@ -11,51 +10,54 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index:1090;
+    z-index: 4;
 }
 
 .user-container .user-wrap {
     height: 100vh;
     max-width: 1390px;
     margin: auto;
-    margin-right: 140px;
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-        'userImg userImg positionName positionName'
-        'userImg userImg userSkills userSkills'
-        'userImg userImg backOrNextBtn backOrNextBtn';
+        'userImg positionName'
+        'userImg userSkills'
+        'userImg backOrNextBtn';
     align-items: center;
     column-gap: 118px;
 }
-#user-img-bg{
-    grid-area:userImg;
-    grid-column: span 3;
+
+#user-img-bg {
+    grid-area: userImg;
 }
-.position-name{
+
+.position-name {
     grid-area: positionName;
-    margin-bottom: 54px;
+    padding-top: 94px;
 }
-#user-skills{
+
+#user-skills {
     grid-area: userSkills;
 }
-.back-or-next-user{
+
+.back-or-next-user {
     grid-area: backOrNextBtn;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.user-wrap .left-img-block {
-    position: relative;
-    height:100vh;
-    max-width:684px;
-    flex-grow:1;
-    background-image:url(../img/dmintry-eblanov-full.png);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-color:#17181C;
+.back-or-next-user svg{
+    flex-shrink:0;
 }
+.user-wrap .left-img-block {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #17181C;
+}
+
 .user-container .notes {
     display: flex;
     gap: 18px;
@@ -68,7 +70,9 @@
     bottom: 145px;
     left: 50px;
 }
-.notes h3 , .notes .notes-text {
+
+.notes h3,
+.notes .notes-text {
     color: var(--white);
     font-family: 'GothamPro';
     font-size: 24px;
@@ -76,15 +80,19 @@
     font-weight: 400;
     line-height: 36px;
 }
-.notes h3{
+
+.notes h3 {
     font-size: 56px;
-    line-height: 56px; /* 100% */
-    }
+    line-height: 56px;
+    /* 100% */
+}
+
 .user-wrap .right-discription-block {
     max-width: 604px;
     padding-top: calc(94px + 94px);
 }
-.leave-btn{
+
+.leave-btn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -92,19 +100,21 @@
     padding: 9px 13px 7px 8px;
     border: unset;
     margin-left: auto;
-    position: fixed;
+    position: absolute;
     top: 50px;
     right: 145px;
     cursor: pointer;
+    z-index: 5;
+    text-decoration: unset;
 }
-.leave-btn .leave{
+
+.leave-btn .leave {
     font-family: 'GothamProBold';
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color:var(--ligth-blue);
-
+    color: var(--ligth-blue);
 }
 
 .position-name .wich-position {
@@ -125,29 +135,29 @@
     color: var(--white);
 }
 
-.right-discription-block ul {
+#user-skills ul {
     list-style: none;
 }
 
-.right-discription-block .user-skills {
+.user-skills {
     display: flex;
     align-items: flex-start;
     margin-bottom: 24px;
     gap: 18px;
-    order:2;
+    order: 2;
 }
 
-.right-discription-block .user-skills:last-child {
+.user-skills:last-child {
     margin-bottom: 110px;
 }
 
 .user-skills::before {
-    content:"\2713";
-    width:20px;
-    height:20px;
-    border:1px solid var(--ligth-blue);
-    border-radius:20px;
-    color:var(--ligth-blue);
+    content: "\2713";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--ligth-blue);
+    border-radius: 20px;
+    color: var(--ligth-blue);
     text-align: center;
     flex-shrink: 0;
 }
@@ -165,7 +175,10 @@
 .back-or-next-user .next {
     display: flex;
     align-items: center;
-    gap: 18px
+    gap: 18px;
+    background: none;
+    border: unset;
+    cursor: pointer;
 }
 
 .back-or-next-user .back h3,
@@ -178,16 +191,114 @@
     color: var(--ligth-blue);
 }
 
-.section-6 , footer{
-    display:none;
+.section-6,
+footer {
+    display: none;
 
 }
-@media(max-width:1280px){
+
+@media(max-width:1080px) {
     .user-container .user-wrap {
         grid-template-areas:
-        'userImg positionName'
-        'userSkills userSkills'
-        'backOrNextBtn backOrNextBtn';
-        grid-gap:18px;
+            'userImg positionName'
+            'userSkills userSkills'
+            'backOrNextBtn backOrNextBtn';
+        gap: 43px;
+        padding-inline: 24px;
+        align-items: flex-start;
+    }
+
+    #user-img-bg {
+        max-height: 489px;
+    }
+
+    .position-name {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 60px;
+    }
+
+    .position-name .name {
+        font-size: 35px;
+    }
+
+    .user-container {
+        background-position: center;
+        min-height: 1180px;
+    }
+
+    .user-container .header {
+        position: unset;
+        margin-bottom: 37px;
+        padding-inline: 24px;
+    }
+    .user-skills:last-child {
+        margin-bottom:unset;
+    }
+    .user-container .notes {
+        right: 20%;
+        bottom: 50%;
+        left:unset;
+    }
+
+    .leave-btn {
+        right: unset;
+        left: 53%;
+        top:unset;
+    }
+    .section-6,
+footer {
+    display: block;
+
+}
+}
+@media(max-width:768px){
+    .user-container .notes {
+        right: 40px;
+        bottom: 50%;
+        left:unset;
+    }
+    .message-container .right-contacts-block {
+        display: unset;
+      }
+}
+@media(max-width:500px){
+    .user-container .user-wrap {
+        grid-template-areas:
+            'positionName positionName'
+            'userImg userImg'
+            'userSkills userSkills'
+            'backOrNextBtn backOrNextBtn';
+        gap: 26px;
+        padding-inline: 16px;
+        /* align-items: flex-start; */
+    }
+    .user-container .notes{
+        padding: 20px 37px 20px 20px;
+    max-width: 274px;
+    gap: 8px;
+    /* top: 0; */
+    bottom: 25%;
+    right: 10px;
+    }
+     .notes .notes-text {
+        font-size:18px;
+    }
+    #user-img-bg{
+        margin-bottom:78px;
+    }
+    .back{
+        text-align: left;
+    }
+    .next{
+        text-align: right;
+    }
+    .leave-btn{
+        left:15px;
+    }
+}
+@media(max-width:340px){
+    .user-container .notes{
+        bottom:18%;
     }
 }

@@ -1,78 +1,13 @@
 const searchUser = window.location.search;
 const searchParams = new URLSearchParams(searchUser);
-const user = parseInt(searchParams.get("userId"));
+const userId = parseInt(searchParams.get("userId"));
 
 const userImgBg = document.querySelector("#user-img-bg");
 const userPosition = document.querySelector("#user-position");
 const userSkills = document.querySelector("#user-skills");
 const userName = document.querySelector("#user-name");
-
-// const users = [
-//   {
-//     id: 1,
-//     name: 'Дмитрий Иванов',
-//     imgUrl: '/img/dmintry-eblanov-full.png',
-   
-//     position: 'Генеральный директор, управляющий партнер',
-//     listOfGoals: [
-//       'Более чем 15-летний опыт в области маркетинга и рекламы в крупных компаниях',
-//       '10 лет в управляющем менеджменте проектов, в том числе вывод стартапов федерального и международного уровня',
-//       'Подготовка и реализация маркетинговых компаний полного цикла, внедрение инновация в маркетинговую среду',
-//       'Маркетинговый анализ и аудит проектов в рамках инвестиционных сделок',
-//       'Выведение на рынок более 50-ти брендов (в том числе сетевых) и дальнейшее продвижение']
-//   },
-//   {
-//     id: 2,
-//     name: 'Кирилл Черный',
-//     imgUrl: '/img/team-kirill.png',
-   
-//     position: 'Финансы и инвестиции',
-//     listOfGoals: [
-//       'Кирилл просто кирилл ',
-//       'Черный потому что из африки']
-//   },
-//   {
-//     id: 3,
-//     name: 'Михаил Куликов',
-//     imgUrl: '/img/team-mahail-remudov.png',
-   
-//     position: 'Стратегический маркетинг и продажи',
-//     listOfGoals: [
-//       'Миша куликов -1год в стратегическом маркетинге',
-//       'Никто не знает что он здесь забыл ']
-//   },
-//   {
-//     id: 4,
-//     name: 'Андрей Колотаев',
-//     imgUrl: '/img/team-andrei.png',
-   
-//     position: 'Архитектура',
-//     listOfGoals: [
-//       'Колотаев андрей мужик архитектор',
-//       '45лет в архитектуре хотя ему всего 30']
-//   },
-//   {
-//     id: 5,
-//     name: 'Сергей Водопетов',
-//     imgUrl: '/img/sergei-jirnii.png',
-  
-//     position: 'PR и GR проектов',
-//     listOfGoals: [
-//       'Толстый серега Пр и Гр проектов',
-//       '10 лет в рекламе и не только']
-//   },
-//   {
-//     id: 6,
-//     name: 'Бондарев Андрей',
-//     imgUrl: '/img/team-bondarev-andrei.png',
-  
-//     position: 'Маркетинговые исследования',
-//     listOfGoals: [
-//       'Андрюша 22 года не женат ',
-//       'Имеет 33 ребенка',]
-//   }
-// ]
-
+const prevUserSelected = document.querySelector("#prev-user");
+const nextUserSelected= document.querySelector("#next-user");
 
 function generateListOfGoals(goals) {
   let markupGoals = "";
@@ -81,17 +16,54 @@ function generateListOfGoals(goals) {
   });
   return markupGoals;
 }
-const selectedUser = users.find(selectedUser => selectedUser.id === user);
+const selectedUserIndex = users.findIndex((selectedUser) => {
+  return selectedUser.id === userId;
+});
 
-function updateUser(selectedUser) {
+const selectedUser = users[selectedUserIndex];
+
+function updateUser({selectedUser , prevUserName , nextUserName}) {
   userImgBg.style.backgroundImage = `url(..${selectedUser.imgUrl})`
   userPosition.textContent = selectedUser.position;
   userName.textContent = selectedUser.name;
   userSkills.innerHTML = generateListOfGoals(selectedUser.listOfGoals);
+  prevUserSelected.querySelector('h3').innerText = prevUserName;
+  nextUserSelected.querySelector('h3').innerText = nextUserName;
 }
-updateUser(selectedUser);
 
-// backBtn.addEventListener('click' ,() => {
-//     window.location.href="index.html";
-//     console.log("hui");
-// })
+function returnNextOrPreviousUser(userIndex){
+  const obj = {
+    prevUser: null,
+    nextUser: null
+  }
+  if(userIndex === users.length - 1){
+    obj.prevUser = users[userIndex - 1];
+    obj.nextUser = users[0];
+    return obj;
+
+  }
+  if(userIndex === 0){
+    obj.prevUser = users.at(-1);
+    obj.nextUser = users[userIndex + 1];
+    return obj;
+  }
+    obj.prevUser = users[userIndex - 1];
+    obj.nextUser = users[userIndex + 1];
+
+  return obj;
+}
+
+const { prevUser , nextUser } = returnNextOrPreviousUser(selectedUserIndex , users);
+
+updateUser({
+  selectedUser,
+  prevUserName: prevUser.name,
+  nextUserName: nextUser.name,
+});
+
+prevUserSelected.addEventListener('click', () => {
+  window.open(`./user-info.html?userId=${prevUser.id}` ,'_self')
+})
+nextUserSelected.addEventListener('click', () => {
+  window.open(`./user-info.html?userId=${nextUser.id}` ,'_self')
+})
