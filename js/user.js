@@ -31,24 +31,24 @@ function updateUser({selectedUser , prevUserName , nextUserName}) {
   nextUserSelected.querySelector('h3').innerText = nextUserName;
 }
 
-function returnNextOrPreviousUser(userIndex){
+function returnNextOrPreviousUser(selectedUserIndex){
   const obj = {
     prevUser: null,
     nextUser: null
   }
-  if(userIndex === users.length - 1){
-    obj.prevUser = users[userIndex - 1];
+  if(selectedUserIndex === users.length - 1){
+    obj.prevUser = users[selectedUserIndex - 1];
     obj.nextUser = users[0];
     return obj;
 
   }
-  if(userIndex === 0){
+  if(selectedUserIndex === 0){
     obj.prevUser = users.at(-1);
-    obj.nextUser = users[userIndex + 1];
+    obj.nextUser = users[selectedUserIndex + 1];
     return obj;
   }
-    obj.prevUser = users[userIndex - 1];
-    obj.nextUser = users[userIndex + 1];
+    obj.prevUser = users[selectedUserIndex - 1];
+    obj.nextUser = users[selectedUserIndex + 1];
 
   return obj;
 }
