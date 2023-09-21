@@ -47,9 +47,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.back-or-next-user svg{
-    flex-shrink:0;
+
+.back-or-next-user svg {
+    flex-shrink: 0;
 }
+
 .user-wrap .left-img-block {
     height: 100vh;
     background-position: center;
@@ -232,37 +234,43 @@ footer {
         margin-bottom: 37px;
         padding-inline: 24px;
     }
+
     .user-skills:last-child {
-        margin-bottom:unset;
+        margin-bottom: unset;
     }
+
     .user-container .notes {
         right: 20%;
         bottom: 50%;
-        left:unset;
+        left: unset;
     }
 
     .leave-btn {
         right: unset;
         left: 53%;
-        top:unset;
+        top: unset;
     }
-    .section-6,
-footer {
-    display: block;
 
+    .section-6,
+    footer {
+        display: block;
+
+    }
 }
-}
-@media(max-width:768px){
+
+@media(max-width:768px) {
     .user-container .notes {
         right: 40px;
         bottom: 50%;
-        left:unset;
+        left: unset;
     }
+
     .message-container .right-contacts-block {
         display: unset;
-      }
+    }
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
     .user-container .user-wrap {
         grid-template-areas:
             'positionName positionName'
@@ -273,32 +281,39 @@ footer {
         padding-inline: 16px;
         /* align-items: flex-start; */
     }
-    .user-container .notes{
+
+    .user-container .notes {
         padding: 20px 37px 20px 20px;
-    max-width: 274px;
-    gap: 8px;
-    /* top: 0; */
-    bottom: 25%;
-    right: 10px;
+        max-width: 274px;
+        gap: 8px;
+        /* top: 0; */
+        bottom: 25%;
+        right: 10px;
     }
-     .notes .notes-text {
-        font-size:18px;
+
+    .notes .notes-text {
+        font-size: 18px;
     }
-    #user-img-bg{
-        margin-bottom:78px;
+
+    #user-img-bg {
+        margin-bottom: 78px;
     }
-    .back{
+
+    .back {
         text-align: left;
     }
-    .next{
+
+    .next {
         text-align: right;
     }
-    .leave-btn{
-        left:15px;
+
+    .leave-btn {
+        left: 15px;
     }
 }
-@media(max-width:340px){
-    .user-container .notes{
-        bottom:18%;
+
+@media(max-width:340px) {
+    .user-container .notes {
+        bottom: 18%;
     }
 }

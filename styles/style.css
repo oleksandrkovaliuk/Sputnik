@@ -78,11 +78,15 @@ header {
   padding-bottom: 87px;
   z-index: 2;
 }
-
+.menu-wrap .burger{
+  cursor: pointer;
+}
 .menu-wrap .navigation {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  z-index:2;
+  cursor: pointer;
 }
 
 /* First page end */
@@ -143,7 +147,7 @@ header {
 }
 
 .about-company-block img {
-  min-width:34px;
+  min-width: 34px;
 }
 
 .about-company-blocks .svg.plus-dottedline {
@@ -400,7 +404,12 @@ header {
   line-height: 36px;
   color: var(--white);
 }
-
+.catalog-block-list:hover svg path{
+stroke:var(--ligth-blue);
+}
+.catalog-block-list:hover .catalog-block-txt{
+  color:var(--ligth-blue);
+}
 /* Third page end */
 /* Fourth page start */
 .section-4 {
@@ -516,6 +525,7 @@ header {
   padding-top: 8px;
   margin-bottom: 41px;
 }
+
 .project-top-text .project-type-selector {
   font-family: "GothamPro";
   font-size: 18px;
@@ -576,7 +586,10 @@ header {
   justify-content: space-between;
   margin: auto;
 }
-
+.slider-nav-wrap li{
+  padding:3px;
+  cursor: pointer;
+}
 .slider-nav-wrap .slider-nav a {
   text-decoration: none;
 }
@@ -586,7 +599,7 @@ header {
 .sliderbtn3 svg circle,
 .sliderbtn4 svg circle {
   fill: var(--gray);
-  padding:7px;
+  padding: 7px;
 }
 
 .sliderbtn1:hover svg circle,
@@ -704,14 +717,17 @@ header {
 header .mobile-menu-wrap {
   display: none;
 }
-
+.section-3 , .section-4 , .section-5{
+  padding-top:176px;
+}
 /* Fifth page end */
-@media(max-width:1600px){
-  .team-container .teams-wrap{
-    flex-wrap:wrap;
+@media(max-width:1600px) {
+  .team-container .teams-wrap {
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
+
 @media(max-width:1280px) {
   .catalog-container .shows-block-wrap {
     opacity: 0;
@@ -794,7 +810,9 @@ header .mobile-menu-wrap {
 }
 
 @media(max-width:768px) {
-
+  .section-3 , .section-4 , .section-5{
+    padding-top:0px;
+  }
   .section-2 .header,
   .section-3 .header,
   .section-4 .header,
@@ -802,7 +820,9 @@ header .mobile-menu-wrap {
   .section-6 .header {
     display: none;
   }
-
+  .header{
+    padding-inline:24px;
+  }
   .logo-block .logo {
     display: none;
   }
@@ -812,13 +832,16 @@ header .mobile-menu-wrap {
   }
 
   header .mobile-menu-wrap {
-    padding-top: 16px;
     display: flex;
     justify-content: space-between;
     z-index: 2;
     position: relative;
     align-items: center;
     padding-inline: 24px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 16px;
   }
 
   .mobile-menu-wrap .left-nav-mobile {
@@ -873,12 +896,15 @@ header .mobile-menu-wrap {
 
   .section-3 {
     padding-block: 88px;
+    padding-top:88px;
   }
 
   .section-4 {
     padding-top: 97px;
   }
+  .section-5{
 
+  }
   .message-container .right-contacts-block {
     display: unset;
   }
@@ -888,46 +914,63 @@ header .mobile-menu-wrap {
   .catalog-wrap .main-text,
   .project-main-text .main-text,
   .team-container .main-text {
-    font-size:55px;
+    font-size: 55px;
   }
-  .text-wrap .people-name , .about-company-wrap .discription-bottom {
-    font-size:18px;
+
+  .text-wrap .people-name,
+  .about-company-wrap .discription-bottom {
+    font-size: 18px;
   }
-  .about-company-block .discription{
-    font-size:14px;
+
+  .about-company-block .discription {
+    font-size: 14px;
   }
-  .text-wrap .people-position{
-    font-size:14px;
+
+  .text-wrap .people-position {
+    font-size: 14px;
   }
-  .project-top-text .project-main-text{
+
+  .project-top-text .project-main-text {
     flex-direction: column;
     align-items: flex-start;
   }
-  .project-top-text ul{
-    display:none;
+
+  .project-top-text ul {
+    display: none;
   }
 }
-@media(max-width:610px){
-  .name-arrow .catalog-name-txt{
-    font-size:18px;
+
+@media(max-width:610px) {
+  .name-arrow .catalog-name-txt {
+    font-size: 18px;
   }
+
   .logo-block .main-text,
   .top-text-about .main-text,
   .catalog-wrap .main-text,
   .project-main-text .main-text,
-  .team-container .main-text  ,.left-message-wrap .main-text, .contacts-wrap .contacts-top-text{
-    font-size:35px;
+  .team-container .main-text,
+  .left-message-wrap .main-text,
+  .contacts-wrap .contacts-top-text {
+    font-size: 35px;
   }
-  .left-nav-mobile .nav , .left-nav-mobile .phone{
-    display:none;
+
+  .left-nav-mobile .nav,
+  .left-nav-mobile .phone {
+    display: none;
   }
-  .catalog-container .catalog-wrap{
-    margin-inline:20px;
+
+  .catalog-container .catalog-wrap {
+    margin-inline: 20px;
   }
-  .section-2 .about-company-wrap , .message-container .left-message-block , .right-contacts-block .contacts-wrap{
-    padding-inline:20px;
-    }
-      .section-5{
-        padding-left:20px;
-      }
+
+  .section-2 .about-company-wrap,
+  .message-container .left-message-block,
+  .right-contacts-block .contacts-wrap {
+    padding-inline: 20px;
+  }
+
+  .section-5 {
+    padding-left: 20px;
+  }
 }

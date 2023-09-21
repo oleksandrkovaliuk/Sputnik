@@ -7,7 +7,7 @@ const userPosition = document.querySelector("#user-position");
 const userSkills = document.querySelector("#user-skills");
 const userName = document.querySelector("#user-name");
 const prevUserSelected = document.querySelector("#prev-user");
-const nextUserSelected= document.querySelector("#next-user");
+const nextUserSelected = document.querySelector("#next-user");
 
 function generateListOfGoals(goals) {
   let markupGoals = "";
@@ -22,7 +22,7 @@ const selectedUserIndex = users.findIndex((selectedUser) => {
 
 const selectedUser = users[selectedUserIndex];
 
-function updateUser({selectedUser , prevUserName , nextUserName}) {
+function updateUser({ selectedUser, prevUserName, nextUserName }) {
   userImgBg.style.backgroundImage = `url(..${selectedUser.imgUrl})`
   userPosition.textContent = selectedUser.position;
   userName.textContent = selectedUser.name;
@@ -31,29 +31,29 @@ function updateUser({selectedUser , prevUserName , nextUserName}) {
   nextUserSelected.querySelector('h3').innerText = nextUserName;
 }
 
-function returnNextOrPreviousUser(selectedUserIndex){
+function returnNextOrPreviousUser(selectedUserIndex) {
   const obj = {
     prevUser: null,
     nextUser: null
   }
-  if(selectedUserIndex === users.length - 1){
+  if (selectedUserIndex === users.length - 1) {
     obj.prevUser = users[selectedUserIndex - 1];
     obj.nextUser = users[0];
     return obj;
 
   }
-  if(selectedUserIndex === 0){
+  if (selectedUserIndex === 0) {
     obj.prevUser = users.at(-1);
     obj.nextUser = users[selectedUserIndex + 1];
     return obj;
   }
-    obj.prevUser = users[selectedUserIndex - 1];
-    obj.nextUser = users[selectedUserIndex + 1];
+  obj.prevUser = users[selectedUserIndex - 1];
+  obj.nextUser = users[selectedUserIndex + 1];
 
   return obj;
 }
 
-const { prevUser , nextUser } = returnNextOrPreviousUser(selectedUserIndex , users);
+const { prevUser, nextUser } = returnNextOrPreviousUser(selectedUserIndex);
 
 updateUser({
   selectedUser,
@@ -62,8 +62,8 @@ updateUser({
 });
 
 prevUserSelected.addEventListener('click', () => {
-  window.open(`./user-info.html?userId=${prevUser.id}` ,'_self')
+  window.open(`./user-info.html?userId=${prevUser.id}`, '_self')
 })
 nextUserSelected.addEventListener('click', () => {
-  window.open(`./user-info.html?userId=${nextUser.id}` ,'_self')
+  window.open(`./user-info.html?userId=${nextUser.id}`, '_self')
 })

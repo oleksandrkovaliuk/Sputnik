@@ -49,8 +49,19 @@ iframe {
     justify-content: space-between;
     padding: 40px 87px 0px 89px;
     align-items: center;
+    cursor: pointer;
+    top:40px;
+    left:0;
+    right:0;
+    z-index:6;
 }
-
+.header.fixed{
+    position:fixed;
+    padding-top:0px;
+}
+.section-2.fixed{
+    padding-top:85px;
+}
 .logo-block .main-text,
 .top-text-about .main-text,
 .catalog-wrap .main-text,
@@ -77,6 +88,7 @@ form button,
     font-style: normal;
     font-weight: 700;
     line-height: 27px;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -146,6 +158,12 @@ form .input-wrap {
     border: 1px solid rgba(148, 159, 168, 0.50);
     background: var(--dark-gray);
     width: 100%;
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: rgba(148, 159, 168, 0.50);
 
 }
 
@@ -171,6 +189,12 @@ form .input-wrap {
     resize: none;
     min-height: 120px;
     padding: 25px;
+    font-family: 'GothamPro';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: rgba(148, 159, 168, 0.50);
 }
 
 .input-and-label .left-message-label.textarea {
@@ -184,6 +208,7 @@ form .input-wrap {
 .input-and-label .left-message-textarea:focus,
 .input-and-label .left-message-textarea:active {
     outline: none;
+    background-color:unset;
 }
 
 .input-and-label .left-message-input:focus+.left-message-label,
@@ -207,6 +232,7 @@ form .checkbox-wrap {
     bottom: 0;
     right: 0;
     opacity: 0;
+    cursor: pointer;
 }
 
 .checkbox-wrap .checkbox-label {
@@ -338,7 +364,46 @@ ul .footer-nav a {
     gap: 21px;
     justify-content: flex-end;
 }
+.social-media svg{
+    cursor: pointer;
+}
+.social-media svg:hover path{
+    fill:var(--ligth-blue);
+}
+.mobile-menu-wrap .phone,
+.mobile-menu-wrap .nav {
+    display: none;
+}
+.menu-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    z-index: 10;
+    display:none;
+}
+.menu-container .header{
+    padding-top:20px;
+}
+.header a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu-container .menu-wrap{
 
+}
+.menu-wrap ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
 @media(max-width:1080px) {
     footer .footer-text-and-links {
         grid-template-columns: 1fr 1fr;
@@ -351,58 +416,73 @@ ul .footer-nav a {
         border-top: 1px solid #4C5566;
         flex-wrap: wrap;
     }
+
     .section-6 .message-container {
         flex-direction: column;
         gap: 90px;
         padding-left: 0;
-      }
-    
-      .message-container .left-message-block {
+    }
+
+    .message-container .left-message-block {
         padding-inline: 40px;
         padding-top: 80px;
-      }
-    
-      .left-message-block svg {
+    }
+
+    .left-message-block svg {
         display: none;
-      }
-    
-      .left-message-block .left-message-wrap {
+    }
+
+    .left-message-block .left-message-wrap {
         margin: auto;
-      }
-    
-      .left-message-wrap .main-text {
+    }
+
+    .left-message-wrap .main-text {
         text-align: center;
-      }
-    
-      .right-contacts-block .contacts-wrap {
+    }
+
+    .right-contacts-block .contacts-wrap {
         padding-block: 51px;
         padding-inline: 40px
-      }
-    
-      iframe {
+    }
+
+    iframe {
         height: 100vh;
-      }
-    
-      .contacts-wrap .contantcs-text-blocks {
+    }
+
+    .contacts-wrap .contantcs-text-blocks {
         align-items: unset;
         flex-direction: column;
-      }
-    
-      .contantcs-text-blocks .contact-text-block {
+    }
+
+    .contantcs-text-blocks .contact-text-block {
         margin-bottom: 35px;
-      }
-    
-      .contantcs-text-blocks .contact-text-block:last-child {
+    }
+
+    .contantcs-text-blocks .contact-text-block:last-child {
         margin-bottom: 0px;
-      }
-    
-      .message-container .right-contacts-block {
+    }
+
+    .message-container .right-contacts-block {
         display: flex;
-      }
+    }
 }
-@media(max-width:600px){
-    footer .footer-text-and-links{
-        padding-inline:20px;
-      }
+
+@media(max-width:768px) {
+    .mobile-menu-wrap {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    .mobile-menu-wrap .phone,
+.mobile-menu-wrap .nav {
+    display: block;
 }
+}
+
+@media(max-width:600px) {
+    footer .footer-text-and-links {
+        padding-inline: 20px;
+    }
+}
+
 /* Footer end */
