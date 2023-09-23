@@ -746,6 +746,9 @@ header .mobile-menu-wrap {
 }
 
 @media(max-width:1080px) {
+  .header.fixed , .header{
+    padding-inline:24px;
+  }
   .about-company-wrap .top-text-about {
     margin-bottom: 47px;
   }
@@ -820,9 +823,6 @@ header .mobile-menu-wrap {
   .section-6 .header {
     display: none;
   }
-  .header{
-    padding-inline:24px;
-  }
   .logo-block .logo {
     display: none;
   }
@@ -834,7 +834,7 @@ header .mobile-menu-wrap {
   header .mobile-menu-wrap {
     display: flex;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 3;
     position: relative;
     align-items: center;
     padding-inline: 24px;
@@ -955,11 +955,6 @@ header .mobile-menu-wrap {
     font-size: 35px;
   }
 
-  .left-nav-mobile .nav,
-  .left-nav-mobile .phone {
-    display: none;
-  }
-
   .catalog-container .catalog-wrap {
     margin-inline: 20px;
   }
@@ -972,5 +967,8 @@ header .mobile-menu-wrap {
 
   .section-5 {
     padding-left: 20px;
+  }
+  .header.fixed , .header{
+    padding-inline:16px;
   }
 }
