@@ -1009,12 +1009,13 @@
                     </svg>
                     <div class="left-message-wrap">
                         <h2 class="main-text">Напишите нам</h2>
-                        <form>
+                        <form id="feedback-form" onsubmit="return checkOnSubmitFeedbackForm(event)">
                             <div class="input-wrap">
                                 <h3 class="input-top-text">Фамилия отчества</h3>
                                 <div class="input-and-label">
                                     <input placeholder="" type="text" id="name" name="name" class="left-message-input">
                                     <label class="left-message-label" for="name">Как к вам обращаться?</label>
+                                    <p class="alert-if-error">Вы должны ввести имя!</p>
                                 </div>
                             </div>
                             <div class="input-wrap">
@@ -1023,6 +1024,7 @@
                                     <input placeholder="" type="email" id="email" name="email"
                                         class="left-message-input">
                                     <label class="left-message-label" for="emali">Как к вам обращаться?</label>
+                                    <p class="alert-if-error email">Вы должны ввести email!</p>
                                 </div>
                             </div>
                             <div class="input-wrap">
@@ -1031,13 +1033,15 @@
                                     <textarea placeholder="" id="message" name="message"
                                         class="left-message-textarea"></textarea>
                                     <label class="left-message-label textarea" for="message">Напишите сообщение</label>
+                                    <p class="alert-if-error textarea">Вы должны ввести сообщение !</p>
                                 </div>
                             </div>
                             <div class="checkbox-wrap">
-                                <input type="checkbox" id="checkbox" name="checkbox" class="checkbox">
-                                <label class="checkbox-label" for="checkbox">Согласен(-на) на обработку данных</label>
+                                <input type="checkbox" id="checkbox" name="checkagree" class="checkbox">
+                                <label class="checkbox-label" for="checkagree">Согласен(-на) на обработку данных</label>
+                                <p class="alert-if-error check">Вы должны быть согласны!</p>
                             </div>
-                            <button>Проекты</button>
+                            <button type="submit">Проекты</button>
                         </form>
                     </div>
                 </div>
@@ -1151,6 +1155,7 @@
     <script src="./js/generatemainimg.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/sendForm.js"></script>
 </body>
 
 </html>
